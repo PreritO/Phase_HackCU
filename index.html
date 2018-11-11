@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HELLO WORLD</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="wavRecorder.js"></script>
+
+</head>
+<body>
+
+<audio id="myAudio">
+  <source src="out/song.ogg" type="audio/ogg">
+  <source src="out/song.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<p>Click the button to Run Server</p>
+
+<button onclick="runServer()" type="button">Run TCP Server</button>
+
+<p>Click the buttons to play or pause the audio.</p>
+
+<button onclick="playAudio()" type="button">Play Audio</button>
+<button onclick="pauseAudio()" type="button">Pause Audio</button> 
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+    x.play(); 
+} 
+
+function pauseAudio() { 
+    x.pause(); 
+} 
+</script>
+
+</body>
+</html>
